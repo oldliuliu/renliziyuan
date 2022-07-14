@@ -90,4 +90,8 @@ export default {
   .mobile .fixed-header {
     width: 100%;
   }
+  .sidebar-container {
+      background: -webkit-linear-gradient(bottom, #3d6df8, #5b8cff);
+}
+
 </style>

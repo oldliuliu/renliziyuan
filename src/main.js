@@ -15,7 +15,13 @@ import router from './router'
 
 import '@/icons' // icon svg图标
 import '@/permission' // permission control 权限控制
-
+// 批量导入自定义指令 作用可以简化指令的写法
+// 可以把所有的按需导出的全部导入到一个对象中，对象名字叫directive
+import * as obj from '@/directives'// 得到一个对象
+// Objdect.keys(obj) //['imgerror','abc']
+Object.keys(obj).forEach(item => {
+  Vue.directive(item, obj[item])
+})
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
